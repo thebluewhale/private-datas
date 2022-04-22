@@ -206,13 +206,14 @@ prompt_hg() {
 # Recommended : 7, 68, 98, 102
 prompt_dir() {
   #prompt_segment 98 $CURRENT_FG '%~'
-	prompt_segment 98 $CURRENT_FG '%c'
+  prompt_segment 98 $CURRENT_FG '%c'
 }
 
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
   if [[ -n "$VIRTUAL_ENV" && -n "$VIRTUAL_ENV_DISABLE_PROMPT" ]]; then
-    prompt_segment blue black "(${VIRTUAL_ENV:t:gs/%/%%})"
+    #prompt_segment blue black "(${VIRTUAL_ENV:t:gs/%/%%})"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
 
