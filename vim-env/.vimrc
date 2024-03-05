@@ -35,7 +35,7 @@ else
 endif
 
 " common
-"set expandtab " tap->space*4'
+set expandtab " tap->space*4'
 set smarttab
 set smartindent
 set autoindent
@@ -78,7 +78,6 @@ Plugin 'AutoComplPop'
 Plugin 'Tagbar'
 Plugin 'grep.vim'
 Plugin 'ctrlp.vim'
-Plugin 'edc-support' " for Tizen development
 "Plugin 'https://github.com/wesleyche/SrcExpl'
 "Plugin 'surround.vim'
 "Plugin 'OmniCppComplete'
