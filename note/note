@@ -1,0 +1,14 @@
+frame_caret blinking issue
+  - when option clicks, EventHandler::HandleMousePressEvent and
+    EventHandler::HandleMouseReleaseEvent is different.
+  - Looks like PressEvent is fired from blink,
+    ReleaseEvent is fired from content(option list).
+  - MacOS, no PressEvent/ReleaseEvent is fired.
+  - frame_->Selection().SetCaretBlinkingSuspended is the point.
+  - frame_이 다르다..!
+
+
+tab option disabled
+  - need to write test case
+  - content/public/android/javatest/src/org/chromium/content/browser/input/SelectPopupTest.java에서 무엇을 할 수 없을까
+  - 예를 들면 backgroudn 값을 가져와서 비교한다거나.
